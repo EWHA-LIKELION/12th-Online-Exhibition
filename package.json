@@ -41,6 +41,7 @@
   "devDependencies": {
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.34",
+    "prettier": "^3.4.2",
     "typescript": "^4.9.5"
   }
 }
