@@ -1,7 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
-import MainPage from '../pages/MainPage/MainPage';
-import GradPage from 'pages/DetailPage/GradPage';
+import MainPage from 'pages/MainPage/MainPage';
+import AboutPage from 'pages/AboutPage/AboutPage';
+import ProjectPage from 'pages/ProjectPage/ProjectPage';
+import EpiloguePage from 'pages/EpiloguePage/EpiloguePage';
+import CreditsPage from 'pages/CreditsPage/CreditsPage';
 
 const router = createBrowserRouter([
   {
@@ -9,7 +12,10 @@ const router = createBrowserRouter([
     element: <ScrollToTop />,
     children: [
       { path: '', element: <MainPage /> },
-      { path: 'grad', element: <GradPage /> },
+      { path: 'about', element: <AboutPage /> },
+      { path: 'graduation', element: <ProjectPage /> },
+      { path: 'epilogue', element: <EpiloguePage /> },
+      { path: 'credits', element: <CreditsPage /> },
     ],
   },
 ]);

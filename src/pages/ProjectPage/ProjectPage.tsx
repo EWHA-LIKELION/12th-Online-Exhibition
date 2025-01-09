@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import * as S from "./GradPage.style";
+import React, { useState } from 'react';
+import * as S from './ProjectPage.style';
 
-const GradPage: React.FC = () => {
-  const ctgryList = ["I WANT IT!", "깨비", "MoY"];
+const ProjectPage = () => {
+  const ctgryList = ['I WANT IT!', '깨비', 'MoY'];
   const [selectedChip, setSelectedChip] = useState<string | null>(null);
 
   return (
@@ -14,7 +14,7 @@ const GradPage: React.FC = () => {
             <S.Category
               key={index}
               onClick={() => setSelectedChip(category)}
-              className={selectedChip === category ? "selected" : ""}
+              className={selectedChip === category ? 'selected' : ''}
             >
               {category}
             </S.Category>
@@ -25,4 +25,4 @@ const GradPage: React.FC = () => {
   );
 };
 
-export default GradPage;
+export default ProjectPage;
