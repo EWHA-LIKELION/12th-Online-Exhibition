@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   align-items: center;
 `;
 export const Title = styled.div`
-  margin-bottom: 25px;
+  margin-bottom: 35px;
   width: 100%;
   text-align: start;
 
@@ -16,27 +16,56 @@ export const Title = styled.div`
 `;
 
 export const Container1 = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, max-content));
-  row-gap: 2px;
-  column-gap: 20px;
-  justify-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
   width: 100%;
 `;
 
-export const Category = styled.div`
-  //width: 100%;
+export const Row = styled.div`
+  display: flex;
+  gap: 20px;
+  justify-content: start;
+`;
+
+export const Category = styled.div<{ isSelected: boolean }>`
+  padding: 0;
+  position: relative;
+  display: inline-block;
+
   color: ${({ theme }) => theme.colors.black};
   text-align: center;
-  ${({ theme }) => theme.fonts.header03};
+  ${({ theme }) => theme.fonts.basic};
 
   cursor: pointer;
+
+  span {
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 105%;
+    height: 15px;
+    background: ${({ theme, isSelected }) =>
+      isSelected ? theme.colors.green02 : 'transparent'};
+    z-index: 0;
+    flex-shrink: 0;
+  }
 `;
 
 export const Container2 = styled.div`
   margin-top: 30px;
   margin-bottom: 133px;
 
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -48,7 +77,7 @@ export const Box = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 342px;
+  width: 100%;
   min-height: 50px;
   flex-shrink: 0;
   border: 1px dashed ${({ theme }) => theme.colors.black};

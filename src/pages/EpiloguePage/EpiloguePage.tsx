@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import * as S from './EpiloguePage.style';
+import Category from './components/Category';
 import EpilogueBox from './components/EpilogueBox';
 import { epilogueData } from 'assets/data/epilogueData';
 import { ReactComponent as Close } from 'assets/icons/close.svg';
@@ -16,13 +17,11 @@ const EpiloguePage = () => {
     <S.Wrapper>
       <Close />
       <S.Title>OUR STORY</S.Title>
-      <S.Container1>
-        {categories.map((category, index) => (
-          <S.Category key={index} onClick={() => setSelectedCategory(category)}>
-            {category}
-          </S.Category>
-        ))}
-      </S.Container1>
+      <Category
+        categories={categories}
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+      />
       <S.Container2>
         {selectedData.map((item) => (
           <EpilogueBox
