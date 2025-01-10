@@ -1,10 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 import Reset from './reset';
-import Font from './font';
+import 'styles/fonts.css';
 
 const GlobalStyle = createGlobalStyle`
   ${Reset}
-  ${Font}
 
   * {
     box-sizing: border-box;
@@ -16,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100dvh;
     background: ${({ theme }) => theme.colors.grey03};
     color: ${({ theme }) => theme.colors.black};
-    font-family: "Noto Sans KR", "Bebas Neue", sans-serif;
+    font-family: "Bebas Neue", "Noto Sans KR", sans-serif;
     font-size: 62.5%;
     
     -ms-overflow-style: none; 
@@ -49,6 +48,11 @@ const GlobalStyle = createGlobalStyle`
       margin: 0 auto;
     } 
   }
+
+  ::-webkit-scrollbar {
+  display: none;
+}
+
 `;
 
 export default GlobalStyle;
