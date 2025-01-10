@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import * as S from './EpiloguePage.style';
+
+import Header from '_common/Header';
 import Category from './components/Category';
 import EpilogueBox from './components/EpilogueBox';
 import { epilogueData } from 'assets/data/epilogueData';
-import { ReactComponent as Close } from 'assets/icons/close.svg';
 
 const categories = Object.keys(epilogueData);
 
@@ -14,24 +15,27 @@ const EpiloguePage = () => {
   const selectedData = epilogueData[selectedCategory] || [];
 
   return (
-    <S.Wrapper>
-      <S.Title>OUR STORY</S.Title>
-      <Category
-        categories={categories}
-        selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
-      />
-      <S.Container2>
-        {selectedData.map((item) => (
-          <EpilogueBox
-            key={item.id}
-            item={item}
-            isOpen={openBoxId === item.id}
-            onToggle={() => setOpenBoxId(openBoxId === item.id ? null : item.id)}
-          />
-        ))}
-      </S.Container2>
-    </S.Wrapper>
+    <>
+      <Header />
+      <S.Wrapper>
+        <S.Title>OUR STORY</S.Title>
+        <Category
+          categories={categories}
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+        />
+        <S.Container2>
+          {selectedData.map((item) => (
+            <EpilogueBox
+              key={item.id}
+              item={item}
+              isOpen={openBoxId === item.id}
+              onToggle={() => setOpenBoxId(openBoxId === item.id ? null : item.id)}
+            />
+          ))}
+        </S.Container2>
+      </S.Wrapper>
+    </>
   );
 };
 
