@@ -4,6 +4,10 @@ interface TabProps {
   selected: boolean;
 }
 
+interface ChipProps {
+  current?: number;
+}
+
 export const Container = styled.div`
   width: 100%;
   height: 100%;
@@ -45,8 +49,10 @@ export const SubTitle = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 60px;
+
   align-items: center;
-  margin-top: 50px;
+  margin-top: 40px;
   letter-spacing: 1px;
   gap: 15px;
   ${({ theme }) => theme.fonts.header03};
@@ -57,11 +63,6 @@ export const SubTitle = styled.div`
     margin-left: 11px;
   }
 `;
-
-// export const Tab = styled.div`
-//   cursor: pointer;
-//   ${({ theme }) => theme.fonts.header03};
-// `;
 
 export const Tab = styled.div<TabProps>`
   ${({ theme }) => theme.fonts.header03};
@@ -82,12 +83,33 @@ export const ChipBox = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 `;
-export const Chip = styled.div`
+
+export const Chip = styled.div<ChipProps>`
   ${({ theme }) => theme.fonts.content02};
   flex-shrink: 1;
   padding: 9px 8px 9px 8px;
   border: 1px dashed var(--black, #121212);
+  flex-shrink: 0;
+  margin-bottom: 5px;
+  border-right: none;
+
+  ${({ current }) => {
+    if (current === 3) {
+      return `
+        &:nth-child(4), &:last-child {
+          border-right: 1px dashed var(--black, #121212);
+        }
+      `;
+    } else {
+      return `
+      &:nth-child(3), &:last-child {
+        border-right: 1px dashed var(--black, #121212);
+      }
+    `;
+    }
+  }}
 `;
 
 export const LineBox = styled.div`
@@ -102,10 +124,23 @@ export const Line = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   ${({ theme }) => theme.fonts.content02};
+
+  span:first-child {
+    flex-shrink: 0;
+    padding-right: 11px;
+  }
 
   .period {
     color: ${({ theme }) => theme.colors.grey02};
+    flex-shrink: 0;
+    padding-left: 11px;
+  }
+
+  .dashed {
+    width: 100%;
+    border-bottom: 1px dashed ${({ theme }) => theme.colors.grey02};
   }
 `;
 

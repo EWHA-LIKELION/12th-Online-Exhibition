@@ -1,7 +1,11 @@
 import * as S from './ProjectPage.style';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
+
+// assets
 import { gradProjectList, hackProjectList } from 'assets/data/projectData';
+
+// components
 import Header from '_common/Header';
 import Tabs from './components/Tabs';
 import ProjectContent from './components/ProjectContent';
