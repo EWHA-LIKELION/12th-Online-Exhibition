@@ -1,45 +1,45 @@
 // hackathon
 import hack1_thumbnail from 'assets/images/hackathon/hack1/hack1_thumbnail.png';
-import hack1_1 from '../images/hackathon/hack1/hack1_1.png';
-import hack1_2 from '../images/hackathon/hack1/hack1_2.png';
-import hack1_3 from '../images/hackathon/hack1/hack1_3.png';
-import hack1_4 from '../images/hackathon/hack1/hack1_4.png';
-import hack1_5 from '../images/hackathon/hack1/hack1_5.png';
-import hack1_6 from '../images/hackathon/hack1/hack1_6.png';
-import hack1_7 from '../images/hackathon/hack1/hack1_7.png';
-import hack1_8 from '../images/hackathon/hack1/hack1_8.png';
+import hack1_1 from 'assets/images/hackathon/hack1/hack1_1.png';
+import hack1_2 from 'assets/images/hackathon/hack1/hack1_2.png';
+import hack1_3 from 'assets/images/hackathon/hack1/hack1_3.png';
+import hack1_4 from 'assets/images/hackathon/hack1/hack1_4.png';
+import hack1_5 from 'assets/images/hackathon/hack1/hack1_5.png';
+import hack1_6 from 'assets/images/hackathon/hack1/hack1_6.png';
+import hack1_7 from 'assets/images/hackathon/hack1/hack1_7.png';
+import hack1_8 from 'assets/images/hackathon/hack1/hack1_8.png';
 
-import hack2_thumbnail from '../images/hackathon/hack2/hack2_thumbnail.png';
-import hack2_1 from '../images/hackathon/hack2/hack2_1.png';
-import hack2_2 from '../images/hackathon/hack2/hack2_2.png';
-import hack2_3 from '../images/hackathon/hack2/hack2_3.png';
+import hack2_thumbnail from 'assets/images/hackathon/hack2/hack2_thumbnail.png';
+import hack2_1 from 'assets/images/hackathon/hack2/hack2_1.png';
+import hack2_2 from 'assets/images/hackathon/hack2/hack2_2.png';
+import hack2_3 from 'assets/images/hackathon/hack2/hack2_3.png';
 
-import hack3_thumbnail from '../images/hackathon/hack3/hack3_thumbnail.png';
-import hack3_1 from '../images/hackathon/hack3/hack3_1.png';
-import hack3_2 from '../images/hackathon/hack3/hack3_2.png';
-import hack3_3 from '../images/hackathon/hack3/hack3_3.png';
-import hack3_4 from '../images/hackathon/hack3/hack3_4.png';
-import hack3_5 from '../images/hackathon/hack3/hack3_5.png';
+import hack3_thumbnail from 'assets/images/hackathon/hack3/hack3_thumbnail.png';
+import hack3_1 from 'assets/images/hackathon/hack3/hack3_1.png';
+import hack3_2 from 'assets/images/hackathon/hack3/hack3_2.png';
+import hack3_3 from 'assets/images/hackathon/hack3/hack3_3.png';
+import hack3_4 from 'assets/images/hackathon/hack3/hack3_4.png';
+import hack3_5 from 'assets/images/hackathon/hack3/hack3_5.png';
 
 // graduation
-import grad1_thumbnail from '../images/graduation/grad1/grad1_thumbnail.png';
-import grad1_1 from '../images/graduation/grad1/grad1_1.png';
-import grad1_2 from '../images/graduation/grad1/grad1_2.png';
-import grad1_3 from '../images/graduation/grad1/grad1_3.png';
+import grad1_thumbnail from 'assets/images/graduation/grad1/grad1_thumbnail.png';
+import grad1_1 from 'assets/images/graduation/grad1/grad1_1.png';
+import grad1_2 from 'assets/images/graduation/grad1/grad1_2.png';
+import grad1_3 from 'assets/images/graduation/grad1/grad1_3.png';
 
-import grad2_thumbnail from '../images/graduation/grad2/grad2_thumbnail.png';
-import grad2_1 from '../images/graduation/grad2/grad2_1.png';
-import grad2_2 from '../images/graduation/grad2/grad2_2.png';
-import grad2_3 from '../images/graduation/grad2/grad2_3.png';
-import grad2_4 from '../images/graduation/grad2/grad2_4.png';
-import grad2_5 from '../images/graduation/grad2/grad2_5.png';
+import grad2_thumbnail from 'assets/images/graduation/grad2/grad2_thumbnail.png';
+import grad2_1 from 'assets/images/graduation/grad2/grad2_1.png';
+import grad2_2 from 'assets/images/graduation/grad2/grad2_2.png';
+import grad2_3 from 'assets/images/graduation/grad2/grad2_3.png';
+import grad2_4 from 'assets/images/graduation/grad2/grad2_4.png';
+import grad2_5 from 'assets/images/graduation/grad2/grad2_5.png';
 
-import grad3_thumbnail from '../images/graduation/grad3/grad3_thumbnail.png';
-import grad3_1 from '../images/graduation/grad3/grad3_1.png';
-import grad3_2 from '../images/graduation/grad3/grad3_2.png';
-import grad3_3 from '../images/graduation/grad3/grad3_3.png';
-import grad3_4 from '../images/graduation/grad3/grad3_4.png';
-import grad3_5 from '../images/graduation/grad3/grad3_5.png';
+import grad3_thumbnail from 'assets/images/graduation/grad3/grad3_thumbnail.png';
+import grad3_1 from 'assets/images/graduation/grad3/grad3_1.png';
+import grad3_2 from 'assets/images/graduation/grad3/grad3_2.png';
+import grad3_3 from 'assets/images/graduation/grad3/grad3_3.png';
+import grad3_4 from 'assets/images/graduation/grad3/grad3_4.png';
+import grad3_5 from 'assets/images/graduation/grad3/grad3_5.png';
 
 export type ProjectType = {
   id: number;
@@ -128,7 +128,7 @@ stew
 export const gradProjectList = [
   {
     id: 1,
-    name: 'I WANT IT!',
+    name: 'i want it!',
     thumbnail: grad1_thumbnail,
     intro: '네 취향을 담아, 프라이빗 위시리스트',
     description: `친구 생일, 연말, 센스있게 선물하고 싶은데 무엇을 
@@ -152,7 +152,7 @@ I WANT IT!`,
     thumbnail: grad2_thumbnail,
     intro: '가구 구성원 간 가사 분배 서비스',
     description: `“우리집 청소는 항상 나만 하는 것 같아요.”
-    함께 사는 가구원들과 집안일을 골고루 나누고 
+함께 사는 가구원들과 집안일을 골고루 나누고 
 싶나요? ‘깨비’는 가구원들과 함께 사용할 수 있는 
 가사 분배 서비스예요. 캘린더에서 나와 가구원들의 할 일을 등록하면 홈에서 각 유저의 집안일 진행 현황 및 우리집 집안일 분배 현황을 확인할 수 있어요.
 귀여운 캐릭터와 함께 집안일 레벨을 올리며 
