@@ -15,7 +15,6 @@ const EpiloguePage = () => {
 
   return (
     <S.Wrapper>
-      <Close />
       <S.Title>OUR STORY</S.Title>
       <Category
         categories={categories}
