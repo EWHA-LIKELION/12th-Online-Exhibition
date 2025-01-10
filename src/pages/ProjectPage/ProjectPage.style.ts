@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-import { ReactComponent as CloseIcon } from 'assets/icons/close.svg';
 import { ReactComponent as HighlightIcon } from 'assets/icons/highlight.svg';
 
 interface TabProps {
@@ -14,19 +13,11 @@ interface MemberProps {
 export const Container = styled.div`
   width: 100%;
   height: 100%;
-  padding: 0 1.5rem;
-`;
-
-export const CloseBtn = styled(CloseIcon)`
-  display: flex;
-  cursor: pointer;
-  margin-top: 37px;
-  margin-right: 1.5rem;
+  padding: 0 24px;
 `;
 
 export const Title = styled.div`
   ${({ theme }) => theme.fonts.header01};
-  margin-top: 2.63rem;
 `;
 
 export const TabContainer = styled.div`
@@ -34,7 +25,7 @@ export const TabContainer = styled.div`
   flex-direction: row;
   align-items: center;
   height: 60px;
-  gap: 1.25rem;
+  gap: 20px;
   margin-top: 38px;
   z-index: 0;
 `;
@@ -62,12 +53,12 @@ export const Tab = styled.div<TabProps>`
     word-spacing: -6px;
   }
 
-  /* background-color: ${({ selected, theme }) =>
-    selected ? theme.colors.green02 : 'transparent'}; */
-  /* background-size: 100% 15px; */
+  background-color: ${({ selected, theme }) =>
+    selected ? theme.colors.green02 : 'transparent'};
+  background-size: 100% 15px;
   padding: 2px 0 6px 2px;
 
-  ${({ selected }) =>
+  /* ${({ selected }) =>
     selected &&
     `
     animation: fill-background 0.5s forwards ease-in-out;
@@ -82,9 +73,9 @@ export const Tab = styled.div<TabProps>`
       background-position: 0% 0;
       background-size: 100% 15px;
       background-color: ${({ selected, theme }) =>
-        selected ? theme.colors.green02 : 'transparent'};
+    selected ? theme.colors.green02 : 'transparent'};
     }
-  }
+  } */
 `;
 
 export const Highlight = styled(HighlightIcon)`
@@ -100,7 +91,7 @@ export const Highlight = styled(HighlightIcon)`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 1.25rem;
+  margin-top: 20px;
 `;
 
 export const Thumbnail = styled.div`
@@ -108,8 +99,8 @@ export const Thumbnail = styled.div`
 `;
 
 export const Intro = styled.div`
-  margin-top: 1.87rem;
-  margin-bottom: 1.25rem;
+  margin-top: 30px;
+  margin-bottom: 20px;
   ${({ theme }) => theme.fonts.content01}
 `;
 
@@ -124,9 +115,9 @@ export const ImageGallery = styled.div`
   flex-direction: row;
   width: 100%;
   height: 283px;
-  margin-top: 2.81rem;
-  margin-bottom: 3.12rem;
-  gap: 0.94rem;
+  margin-top: 45px;
+  margin-bottom: 50px;
+  gap: 15px;
   overflow-x: scroll;
 `;
 
@@ -166,7 +157,7 @@ export const Links = styled.div`
   height: 50px;
   gap: 20px;
   margin-top: 55px;
-  margin-bottom: 5.12rem;
+  margin-bottom: 82px;
 `;
 
 export const Git = styled.a`

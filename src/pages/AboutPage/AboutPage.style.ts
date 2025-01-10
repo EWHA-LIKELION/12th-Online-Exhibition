@@ -1,14 +1,17 @@
 import styled from 'styled-components';
 
+interface TabProps {
+  selected: boolean;
+}
+
 export const Container = styled.div`
   width: 100%;
   height: 100%;
-  padding: 0 1.5rem;
+  padding: 0 24px;
 `;
 
 export const Title = styled.div`
   ${({ theme }) => theme.fonts.header01};
-  margin-top: 2.63rem;
 `;
 
 export const Img = styled.img`
@@ -39,8 +42,13 @@ export const Intro = styled.div`
 `;
 
 export const SubTitle = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
   margin-top: 50px;
-
+  letter-spacing: 1px;
+  gap: 15px;
   ${({ theme }) => theme.fonts.header03};
 
   .plus {
@@ -48,6 +56,26 @@ export const SubTitle = styled.div`
     color: ${({ theme }) => theme.colors.grey02};
     margin-left: 11px;
   }
+`;
+
+// export const Tab = styled.div`
+//   cursor: pointer;
+//   ${({ theme }) => theme.fonts.header03};
+// `;
+
+export const Tab = styled.div<TabProps>`
+  ${({ theme }) => theme.fonts.header03};
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  height: 15px;
+
+  background-color: ${({ selected, theme }) =>
+    selected ? theme.colors.green02 : 'transparent'};
+  background-size: 100% 15px;
+  padding: 2px 0 6px 2px;
 `;
 
 export const ChipBox = styled.div`

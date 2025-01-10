@@ -1,6 +1,7 @@
 export const curriculumList = [
   {
-    part: 'pmdesign',
+    id: 1,
+    part: 'pm·design',
     content: [
       {
         id: 1,
@@ -25,6 +26,7 @@ export const curriculumList = [
     ],
   },
   {
+    id: 2,
     part: 'frontend',
     content: [
       {
@@ -50,6 +52,7 @@ export const curriculumList = [
     ],
   },
   {
+    id: 3,
     part: 'backend',
     content: [
       {
