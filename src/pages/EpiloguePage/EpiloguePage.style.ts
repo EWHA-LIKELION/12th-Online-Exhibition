@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  padding: 0 23px;
+  padding: 0px 23px 0 23px;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
+
 export const Title = styled.div`
   margin-bottom: 35px;
   width: 100%;
