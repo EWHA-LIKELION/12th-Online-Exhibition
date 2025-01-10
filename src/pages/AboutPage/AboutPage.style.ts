@@ -60,7 +60,7 @@ export const SubTitle = styled.div`
   .plus {
     ${({ theme }) => theme.fonts.content04};
     color: ${({ theme }) => theme.colors.grey02};
-    margin-left: 11px;
+    margin-top: 12px;
   }
 `;
 
@@ -76,7 +76,7 @@ export const Tab = styled.div<TabProps>`
   background-color: ${({ selected, theme }) =>
     selected ? theme.colors.green02 : 'transparent'};
   background-size: 100% 15px;
-  padding: 2px 0 6px 2px;
+  padding: 2px 0 8px 2px;
 `;
 
 export const ChipBox = styled.div`

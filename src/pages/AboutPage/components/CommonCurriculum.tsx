@@ -7,7 +7,7 @@ const CommonCurriculum = () => {
     <>
       <S.SubTitle>
         <span>COMMON CURRICULUM</span>
-        <span className="plus">* 12기 기준</span>
+        <span className="plus">*12기 기준</span>
       </S.SubTitle>
       <S.ChipBox>
         {commonList.map((content, index) => (

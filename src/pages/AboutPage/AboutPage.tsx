@@ -24,7 +24,7 @@ const AboutPage = () => {
         <S.Title>ABOUT US</S.Title>
         <S.Img src={about} />
         <S.IntroTop>
-          <span className="ment"> 활동기간</span>
+          <span className="ment"> 활동 기간</span>
           <span className="period">2024.02 - 2025.01</span>
         </S.IntroTop>
         <S.Intro>
