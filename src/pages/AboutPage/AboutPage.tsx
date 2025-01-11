@@ -10,6 +10,7 @@ import Header from '_common/Header';
 import ActivityRecord from './components/ActivityRecord';
 import CommonCurriculum from './components/CommonCurriculum';
 import Modal from './components/Modal';
+import Footer from '_common/Footer';
 
 const AboutPage = () => {
   const [selectedPartId, setSelectedPartId] = useState(1);
@@ -65,6 +66,7 @@ const AboutPage = () => {
         <S.ApplyBtn onClick={() => setIsModalOpen(true)}>
           멋사 13기 지원하러 가기
         </S.ApplyBtn>
+        <Footer />
       </S.Container>
       <Modal isOpen={isModalOpen} handleClose={() => setIsModalOpen(false)} />
     </>

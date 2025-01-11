@@ -30,36 +30,46 @@ export const Row = styled.div`
 `;
 
 export const Category = styled.div<{ isSelected: boolean }>`
-  padding: 0;
-  position: relative;
-  display: inline-block;
-
-  color: ${({ theme }) => theme.colors.black};
-  text-align: center;
-  ${({ theme }) => theme.fonts.basic};
-
+  ${({ theme }) => theme.fonts.header03};
   cursor: pointer;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  margin-bottom: 2px;
 
-  span {
-    padding: 0;
-    position: relative;
-    display: inline-block;
-    z-index: 1;
-  }
+  background-color: transparent;
 
-  &::before {
+  // 인터랙션
+  &::after {
     content: '';
     position: absolute;
-    top: 58%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 105%;
+    bottom: 7px;
+    left: 0;
+    width: 0;
     height: 15px;
-    background: ${({ theme, isSelected }) =>
-      isSelected ? theme.colors.green02 : 'transparent'};
-    z-index: 0;
-    flex-shrink: 0;
+    background-color: ${({ theme }) => theme.colors.green02};
+    z-index: -1;
+    transition: width 0.3s ease-in-out;
   }
+
+  ${({ isSelected }) =>
+    isSelected &&
+    `
+    &::after {
+      width: 100%;
+    }
+  `}
+
+  ${({ isSelected }) =>
+    !isSelected &&
+    `
+    &::after {
+      transition: none;
+      width: 0;
+    }
+  `}
 `;
 
 export const Container2 = styled.div`
