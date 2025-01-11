@@ -38,11 +38,12 @@ export const Tab = styled.div<TabProps>`
   display: flex;
   align-items: center;
   height: 15px;
+  padding: 2px 0 6px 2px;
 
+  // 한/영 글꼴 다르게 적용
   &.kor {
     font-family: 'Noto Sans KR';
     font-size: 24px;
-    font-style: normal;
     font-weight: 700;
     line-height: normal;
   }
@@ -53,29 +54,37 @@ export const Tab = styled.div<TabProps>`
     word-spacing: -6px;
   }
 
-  background-color: ${({ selected, theme }) =>
-    selected ? theme.colors.green02 : 'transparent'};
-  background-size: 100% 15px;
-  padding: 2px 0 6px 2px;
+  background-color: transparent;
 
-  /* ${({ selected }) =>
+  // 인터랙션
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 15px;
+    background-color: ${({ theme }) => theme.colors.green02};
+    z-index: -1;
+    transition: width 0.3s ease-in-out;
+  }
+
+  ${({ selected }) =>
     selected &&
     `
-    animation: fill-background 0.5s forwards ease-in-out;
+    &::after {
+      width: 100%;
+    }
   `}
 
-  @keyframes fill-background {
-    from {
-      background-position: 0% 0;
-      background-size: 0% 15px;
+  ${({ selected }) =>
+    !selected &&
+    `
+    &::after {
+      transition: none;
+      width: 0;
     }
-    to {
-      background-position: 0% 0;
-      background-size: 100% 15px;
-      background-color: ${({ selected, theme }) =>
-    selected ? theme.colors.green02 : 'transparent'};
-    }
-  } */
+  `}
 `;
 
 export const Highlight = styled(HighlightIcon)`

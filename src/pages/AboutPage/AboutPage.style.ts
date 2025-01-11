@@ -72,11 +72,39 @@ export const Tab = styled.div<TabProps>`
   display: flex;
   align-items: center;
   height: 15px;
+  padding: 2px 0 6px 2px;
 
-  background-color: ${({ selected, theme }) =>
-    selected ? theme.colors.green02 : 'transparent'};
-  background-size: 100% 15px;
-  padding: 2px 0 8px 2px;
+  background-color: transparent;
+
+  // 인터랙션
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 15px;
+    background-color: ${({ theme }) => theme.colors.green02};
+    z-index: -1;
+    transition: width 0.3s ease-in-out;
+  }
+
+  ${({ selected }) =>
+    selected &&
+    `
+    &::after {
+      width: 100%;
+    }
+  `}
+
+  ${({ selected }) =>
+    !selected &&
+    `
+    &::after {
+      transition: none;
+      width: 0;
+    }
+  `}
 `;
 
 export const ChipBox = styled.div`

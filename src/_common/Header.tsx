@@ -16,7 +16,7 @@ const Header = () => {
 export default Header;
 
 const HeaderWrapper = styled.div`
-  padding: 84px 28px 42px 0;
+  padding: 44px 28px 42px 0;
 
   display: flex;
   justify-content: flex-end;
