@@ -17,6 +17,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 67px;
+  margin-bottom: 80px;
 `;
 
 export const Member = styled.div`

@@ -1,5 +1,6 @@
 import * as S from './CreditsPage.style';
 import Header from '_common/Header';
+import Footer from '_common/Footer';
 
 const CreditsPage = () => {
   const makers = [
@@ -49,6 +50,7 @@ const CreditsPage = () => {
             </S.Member>
           ))}
         </S.Container>
+        <Footer />
       </S.Wrapper>
     </>
   );
