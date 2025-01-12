@@ -49,6 +49,7 @@ export const Tab = styled.div<TabProps>`
   }
 
   &.eng {
+    margin-top: 6px;
     font-family: 'Bebas Neue';
     letter-spacing: 1px;
     word-spacing: -6px;
