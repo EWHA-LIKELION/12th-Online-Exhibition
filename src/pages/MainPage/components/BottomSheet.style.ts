@@ -14,7 +14,7 @@ export const Overlay = styled(motion.div)`
 export const Container = styled(motion.div)`
   position: fixed;
   z-index: 15;
-  bottom: 0;
+  top: 100vh;
   left: 0;
 
   display: flex;

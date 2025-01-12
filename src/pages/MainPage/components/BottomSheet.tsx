@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useDragControls, PanInfo } from 'framer-motion';
 import * as S from './BottomSheet.style';
 import { ReactComponent as Arrow } from '../../../assets/icons/arrow.svg';
@@ -9,6 +10,7 @@ interface BottomSheetProps {
 
 const BottomSheet = ({ isOpen, onClose }: BottomSheetProps) => {
   const dragControls = useDragControls();
+  const navigate = useNavigate();
 
   const handleDragEnd = (_event: PointerEvent, info: PanInfo) => {
     const OFFSET_THRESHOLD = 150;
@@ -24,6 +26,11 @@ const BottomSheet = ({ isOpen, onClose }: BottomSheetProps) => {
   };
 
   const handleOverlayTap = () => {
+    onClose();
+  };
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
     onClose();
   };
 
@@ -48,11 +55,11 @@ const BottomSheet = ({ isOpen, onClose }: BottomSheetProps) => {
           <Arrow />
         </S.HandlerContainer>
         <S.List>
-          <li>ABOUT US</li>
-          <li>HACKATHON</li>
-          <li>GRADUATION</li>
-          <li>OUR STORY</li>
-          <li>CREDITS</li>
+          <li onClick={() => handleNavigation('/about')}>ABOUT US</li>
+          <li onClick={() => handleNavigation('/hackathon')}>HACKATHON</li>
+          <li onClick={() => handleNavigation('/graduation')}>GRADUATION</li>
+          <li onClick={() => handleNavigation('/epilogue')}>OUR STORY</li>
+          <li onClick={() => handleNavigation('/credits')}>CREDITS</li>
         </S.List>
       </S.Container>
       <S.Overlay
