@@ -1,6 +1,5 @@
-import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { ReactComponent as Logo } from 'assets/icons/likelion.svg';
+import { ReactComponent as Logo } from 'assets/icons/likelion-icon.svg';
 import { ReactComponent as Insta } from 'assets/icons/instagram.svg';
 import { ReactComponent as Github } from 'assets/icons/github.svg';
 
