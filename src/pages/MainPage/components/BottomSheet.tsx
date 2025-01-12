@@ -47,13 +47,13 @@ const BottomSheet = ({ isOpen, onClose }: BottomSheetProps) => {
         <S.HandlerContainer onPointerDown={(e) => dragControls.start(e)}>
           <Arrow />
         </S.HandlerContainer>
-        <ul>
+        <S.List>
           <li>ABOUT US</li>
           <li>HACKATHON</li>
           <li>GRADUATION</li>
           <li>OUR STORY</li>
           <li>CREDITS</li>
-        </ul>
+        </S.List>
       </S.Container>
       <S.Overlay
         initial={false}

@@ -15,12 +15,14 @@ export const Container = styled(motion.div)`
   position: fixed;
   z-index: 15;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 90vh;
-  padding: 2rem 1.6rem;
+  overflow: scroll;
 
   border-radius: 0.625rem 0.625rem 0rem 0rem;
   background-color: ${(props) => props.theme.colors.grey03};
@@ -29,12 +31,26 @@ export const Container = styled(motion.div)`
 `;
 
 export const HandlerContainer = styled.div`
-  padding: 2rem 0;
+  padding: 4.5rem 0 7.5rem;
   display: flex;
   justify-content: center;
   width: 100%;
 
   svg {
     transform: rotate(180deg);
+  }
+`;
+
+export const List = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 425px;
+  width: 100%;
+  padding: 0 2.5rem;
+
+  li {
+    ${({ theme }) => theme.fonts.header01}
+    cursor: pointer;
   }
 `;

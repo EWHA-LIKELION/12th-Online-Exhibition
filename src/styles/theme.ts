@@ -15,10 +15,11 @@ export const theme = {
   fonts: {
     header01: {
       fontFamily: 'Bebas Neue',
-      fontSize: '5rem',
+      fontSize: '80px',
       fontWeight: 400,
       fontStyle: 'normal',
-      letterSpacing: '0.0625rem',
+      lineHeight: '60px',
+      letterSpacing: '1px',
     },
     header02: {
       fontFamily: 'Bebas Neue',

@@ -46,13 +46,11 @@ const MainPage = () => {
       <S.Background>
         <Logo />
       </S.Background>
-      <S.DragHandleArea>
-        <S.DragHandle
-          drag="y"
-          dragConstraints={{ top: -150, bottom: 0 }}
-          onDragEnd={handleDragEnd}
-        />
-      </S.DragHandleArea>
+      <S.DragHandleArea
+        drag="y"
+        dragConstraints={{ top: 0, bottom: 0 }}
+        onDragEnd={handleDragEnd}
+      />
 
       <BottomSheet isOpen={isBottomSheetOpen} onClose={handleClose} />
     </S.Container>
