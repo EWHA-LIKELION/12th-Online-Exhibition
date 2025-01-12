@@ -1,5 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import * as S from './MainPage.style';
+import { PanInfo } from 'framer-motion';
+import BottomSheet from './components/BottomSheet';
 
 import { ReactComponent as Typo01 } from '../../assets/icons/12th.svg';
 import { ReactComponent as Typo02 } from '../../assets/icons/likelion.svg';
@@ -8,6 +10,22 @@ import { ReactComponent as Arrow } from '../../assets/icons/arrow.svg';
 import { ReactComponent as Logo } from '../../assets/icons/likelion-main.svg';
 
 const MainPage = () => {
+  const [isBottomSheetOpen, setIsBottomSheetOpen] = useState(false);
+
+  const handleClose = () => {
+    setIsBottomSheetOpen(false);
+  };
+
+  const handleDragEnd = (
+    _event: MouseEvent | TouchEvent | PointerEvent,
+    info: PanInfo,
+  ) => {
+    const threshold = -50;
+    if (info.offset.y < threshold) {
+      setIsBottomSheetOpen(true);
+    }
+  };
+
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => {
@@ -28,6 +46,15 @@ const MainPage = () => {
       <S.Background>
         <Logo />
       </S.Background>
+      <S.DragHandleArea>
+        <S.DragHandle
+          drag="y"
+          dragConstraints={{ top: -150, bottom: 0 }}
+          onDragEnd={handleDragEnd}
+        />
+      </S.DragHandleArea>
+
+      <BottomSheet isOpen={isBottomSheetOpen} onClose={handleClose} />
     </S.Container>
   );
 };

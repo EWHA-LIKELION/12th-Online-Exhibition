@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const Container = styled.div`
   position: relative;
@@ -37,4 +38,17 @@ export const Background = styled.div`
       flex-shrink: 0;
     }
   }
+`;
+
+export const DragHandleArea = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+`;
+
+export const DragHandle = styled(motion.div)`
+  width: 100%;
+  height: 40rem;
 `;
