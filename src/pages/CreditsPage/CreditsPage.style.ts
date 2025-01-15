@@ -32,7 +32,7 @@ export const Member = styled.div`
   margin-bottom: 80px;
 
   .name {
-    margin-bottom: 8px;
+    margin-bottom: 13px;
   }
 
   .part {
@@ -59,7 +59,7 @@ export const Frame = styled(CreditsFrame)`
   display: flex;
   flex-direction: column;
   z-index: -1;
-  top: -17px;
+  top: -23px;
 
   &.odd {
     align-items: flex-start;

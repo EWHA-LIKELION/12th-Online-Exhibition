@@ -37,7 +37,7 @@ const Backdrop = styled.div`
 
 const Wrapper = styled.div`
   width: 300px;
-  height: 158px;
+  height: 162px;
   flex-shrink: 0;
   background-color: ${({ theme }) => theme.colors.grey03};
   display: flex;
@@ -66,4 +66,5 @@ const Close = styled.div`
   ${({ theme }) => theme.fonts.content03};
   color: ${({ theme }) => theme.colors.grey02};
   cursor: pointer;
+  margin-bottom: 2px;
 `;
