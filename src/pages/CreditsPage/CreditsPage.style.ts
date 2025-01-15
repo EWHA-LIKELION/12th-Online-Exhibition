@@ -59,7 +59,7 @@ export const Frame = styled(CreditsFrame)`
   display: flex;
   flex-direction: column;
   z-index: -1;
-  top: -5px;
+  top: -17px;
 
   &.odd {
     align-items: flex-start;
