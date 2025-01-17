@@ -135,7 +135,7 @@ IWANT IT은 주는 사람과 받는 사람 모두를 행복하게 만들어 주�
 I WANT IT!`,
     images: [grad1_1, grad1_2, grad1_3],
     github: 'https://github.com/Likelion-12th-Capstone-team2/Frontend',
-    website: '',
+    website: 'https://lwantit.vercel.app',
     members: {
       pmdesign: ['유하은', '장예원', '최예은'],
       frontend: ['김예원', '남선우', '송유선'],
@@ -155,7 +155,7 @@ I WANT IT!`,
 우리집을 깨끗하게 유지해봐요!`,
     images: [grad2_1, grad2_2, grad2_3, grad2_4, grad2_5],
     github: 'https://github.com/LikeLion-Kkaebi/Front',
-    website: 'kkaebi.site',
+    website: 'https://www.kkaebi.site',
     members: {
       pmdesign: ['김가을', '김도연', '백지원'],
       frontend: ['김민서', '김채연'],
