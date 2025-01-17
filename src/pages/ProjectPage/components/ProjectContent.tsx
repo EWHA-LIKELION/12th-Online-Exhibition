@@ -27,7 +27,7 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
   return (
     <S.Content>
       {isVideo ? (
-        <video controls width="100%" autoPlay loop muted>
+        <video width="100%" autoPlay loop muted playsInline webkit-playsinline>
           <source src={project.thumbnail} type="video/mp4" />
         </video>
       ) : (
