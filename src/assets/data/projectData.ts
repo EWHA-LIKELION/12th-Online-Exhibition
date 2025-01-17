@@ -34,7 +34,7 @@ import grad2_3 from 'assets/images/graduation/grad2/grad2_3.png';
 import grad2_4 from 'assets/images/graduation/grad2/grad2_4.png';
 import grad2_5 from 'assets/images/graduation/grad2/grad2_5.png';
 
-import grad3_thumbnail from 'assets/images/graduation/grad3/grad3_thumbnail.png';
+import grad3_thumbnail from 'assets/images/graduation/grad3/grad3_thumbnail.mp4';
 import grad3_1 from 'assets/images/graduation/grad3/grad3_1.png';
 import grad3_2 from 'assets/images/graduation/grad3/grad3_2.png';
 import grad3_3 from 'assets/images/graduation/grad3/grad3_3.png';

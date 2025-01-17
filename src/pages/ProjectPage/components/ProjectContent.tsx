@@ -22,9 +22,17 @@ interface ProjectContentProps {
 }
 
 const ProjectContent = ({ project }: ProjectContentProps) => {
+  const isVideo = project.thumbnail.endsWith('.mp4');
+
   return (
     <S.Content>
-      <img src={project.thumbnail} />
+      {isVideo ? (
+        <video controls width="100%" autoPlay loop muted>
+          <source src={project.thumbnail} type="video/mp4" />
+        </video>
+      ) : (
+        <img src={project.thumbnail} />
+      )}
       <S.Intro>{project.intro}</S.Intro>
       <S.Description>{project.description}</S.Description>
 
