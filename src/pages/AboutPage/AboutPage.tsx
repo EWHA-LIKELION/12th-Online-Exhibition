@@ -63,7 +63,7 @@ const AboutPage = () => {
         </S.ChipBox>
 
         <ActivityRecord activityList={activityList} />
-        <S.ApplyBtn onClick={() => setIsModalOpen(true)}>
+        <S.ApplyBtn onClick={() => (window.location.href = "https://plucky-beryl-19c.notion.site/13-18dcc780cd7d8081b9ded0b922de2242")}>
           멋사 13기 지원하러 가기
         </S.ApplyBtn>
         <Footer />
